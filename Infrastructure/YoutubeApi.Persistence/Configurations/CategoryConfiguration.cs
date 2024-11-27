@@ -24,7 +24,7 @@ namespace YoutubeApi.Persistence.Configurations
             };
             Category category2 = new()
             {
-                Id = 1,
+                Id = 2,
                 Name = "Moda",
                 Priorty = 0,
                 ParentId = 0,
@@ -43,7 +43,7 @@ namespace YoutubeApi.Persistence.Configurations
             };
             Category parent2 = new()
             {
-                Id = 3,
+                Id = 4,
                 Name = "Kadın",
                 Priorty = 1,
                 ParentId = 2,
