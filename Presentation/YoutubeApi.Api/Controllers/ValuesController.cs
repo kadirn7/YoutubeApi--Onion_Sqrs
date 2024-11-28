@@ -17,10 +17,7 @@ namespace YoutubeApi.Api.Controllers
             unitOfWork = unitOfWork;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Get()
-        {
-            return Ok(await unitOfWork.GetReadRepository<Product>().GetAllAsync());
-        }
+        
+        
     }
 }

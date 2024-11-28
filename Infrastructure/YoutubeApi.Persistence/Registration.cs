@@ -24,6 +24,7 @@ namespace YoutubeApi.Persistence
             services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
 
             services.AddScoped<IUnitOfWork,UnitofWork>();
+
         }
     }
 }
