@@ -29,8 +29,8 @@ namespace YoutubeApi.Persistence.UnitOfWorks
         public async Task<int> SaveAsync()=>await dbContext.SaveChangesAsync();
         
 
-        IReadRepository<T> IUnitOfWork.GetReadRepository<T>()=>new ReadRepository<T>(dbContext);
+         IReadRepository<T> IUnitOfWork.GetReadRepository<T>()=>new ReadRepository<T>(dbContext);
 
-        IWriteRepository<T> IUnitOfWork.GetWriteRepository<T>()=>new WriteRepository<T>(dbContext);
+         IWriteRepository<T> IUnitOfWork.GetWriteRepository<T>()=>new WriteRepository<T>(dbContext);
     }
 }
