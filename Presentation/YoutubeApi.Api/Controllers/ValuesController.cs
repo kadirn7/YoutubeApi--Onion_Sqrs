@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using YoutubeApi.Aplication.Interfaces.Repositories.UnitOfWorks;
-using YoutubeApi.Domain.Entities;
+using YoutubeApi.Persistence.UnitOfWorks;
 
 namespace YoutubeApi.Api.Controllers
 {
@@ -10,14 +11,15 @@ namespace YoutubeApi.Api.Controllers
     public class ValuesController : ControllerBase
     {
         private readonly IUnitOfWork unitOfWork;
+
         public ValuesController(IUnitOfWork unitOfWork)
         {
-                this.unitOfWork = unitOfWork;
+            unitOfWork = unitOfWork;
         }
+
         [HttpGet]
-        public async Task<IActionResult> Get() 
+        public async Task<IActionResult> Get()
         {
-            
             return Ok(await unitOfWork.GetReadRepository<Product>().GetAllAsync());
         }
     }

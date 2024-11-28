@@ -1,6 +1,6 @@
 
 using YoutubeApi.Persistence;
-
+using YoutubeApi.Aplication;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -16,6 +16,7 @@ builder.Configuration.SetBasePath(env.ContentRootPath)
     .AddJsonFile($"appsettings{env.EnvironmentName}.json",optional:true);
 
 builder.Services.AddPersistance(builder.Configuration);
+builder.Services.AddApplication();
 
 var app = builder.Build();
 
