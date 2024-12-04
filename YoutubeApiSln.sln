@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35514.174 d17.12
+VisualStudioVersion = 17.12.35514.174
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{088065D3-C6CE-40D3-84B9-FDD6F1697709}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeApi.Persistence", "Infrastructure\YoutubeApi.Persistence\YoutubeApi.Persistence.csproj", "{877005E1-2A42-47F9-902E-92397E1EAF92}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeApi.Api", "Presentation\YoutubeApi.Api\YoutubeApi.Api.csproj", "{59CF8C5B-B20A-4F90-A259-C3418EDC0096}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeApi.Mapper", "YoutubeApi.Mapper\YoutubeApi.Mapper.csproj", "{5615E4CC-7A42-4D40-8D0F-43E768686CC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{59CF8C5B-B20A-4F90-A259-C3418EDC0096}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59CF8C5B-B20A-4F90-A259-C3418EDC0096}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59CF8C5B-B20A-4F90-A259-C3418EDC0096}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5615E4CC-7A42-4D40-8D0F-43E768686CC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5615E4CC-7A42-4D40-8D0F-43E768686CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5615E4CC-7A42-4D40-8D0F-43E768686CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5615E4CC-7A42-4D40-8D0F-43E768686CC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,5 +61,6 @@ Global
 		{BEE3ABB1-860E-4D1A-BB86-4E946502FCD2} = {35DAE8B3-D38D-4F59-9B63-E6E360E8EB75}
 		{877005E1-2A42-47F9-902E-92397E1EAF92} = {35DAE8B3-D38D-4F59-9B63-E6E360E8EB75}
 		{59CF8C5B-B20A-4F90-A259-C3418EDC0096} = {C0466706-6424-4A26-97DD-1A3DD77BD07F}
+		{5615E4CC-7A42-4D40-8D0F-43E768686CC9} = {088065D3-C6CE-40D3-84B9-FDD6F1697709}
 	EndGlobalSection
 EndGlobal
