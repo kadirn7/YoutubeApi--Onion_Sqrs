@@ -15,6 +15,6 @@ namespace YoutubeApi.Aplication.Interfaces.Repositories
         
         Task HardDeleteAsync(T entity);
 
-
-            }
+        Task HardDeleteRangeAsync(IList<T> entity);
+    }
 }
