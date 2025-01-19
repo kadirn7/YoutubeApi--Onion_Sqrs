@@ -94,24 +94,24 @@ namespace YoutubeApi.Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "CategoryProduct",
+                name: "ProductCategories",
                 columns: table => new
                 {
-                    CategoriesId = table.Column<int>(type: "int", nullable: false),
-                    ProductsId = table.Column<int>(type: "int", nullable: false)
+                    ProductId = table.Column<int>(type: "int", nullable: false),
+                    CategoryId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CategoryProduct", x => new { x.CategoriesId, x.ProductsId });
+                    table.PrimaryKey("PK_ProductCategories", x => new { x.ProductId, x.CategoryId });
                     table.ForeignKey(
-                        name: "FK_CategoryProduct_Categories_CategoriesId",
-                        column: x => x.CategoriesId,
+                        name: "FK_ProductCategories_Categories_CategoryId",
+                        column: x => x.CategoryId,
                         principalTable: "Categories",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_CategoryProduct_Products_ProductsId",
-                        column: x => x.ProductsId,
+                        name: "FK_ProductCategories_Products_ProductId",
+                        column: x => x.ProductId,
                         principalTable: "Products",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -122,9 +122,9 @@ namespace YoutubeApi.Persistence.Migrations
                 columns: new[] { "Id", "CreatedDate", "IsDeleted", "Name" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 11, 27, 14, 51, 49, 158, DateTimeKind.Local).AddTicks(8038), false, "Books & Industrial" },
-                    { 2, new DateTime(2024, 11, 27, 14, 51, 49, 160, DateTimeKind.Local).AddTicks(911), false, "Home" },
-                    { 3, new DateTime(2024, 11, 27, 14, 51, 49, 160, DateTimeKind.Local).AddTicks(928), true, "Baby" }
+                    { 1, new DateTime(2025, 1, 19, 17, 39, 40, 939, DateTimeKind.Local).AddTicks(7019), false, "Clothing, Home & Games" },
+                    { 2, new DateTime(2025, 1, 19, 17, 39, 40, 939, DateTimeKind.Local).AddTicks(8735), false, "Toys, Baby & Books" },
+                    { 3, new DateTime(2025, 1, 19, 17, 39, 40, 939, DateTimeKind.Local).AddTicks(8775), true, "Electronics & Games" }
                 });
 
             migrationBuilder.InsertData(
@@ -132,10 +132,10 @@ namespace YoutubeApi.Persistence.Migrations
                 columns: new[] { "Id", "CreatedDate", "IsDeleted", "Name", "ParentId", "Priorty" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 11, 27, 14, 51, 49, 160, DateTimeKind.Local).AddTicks(8770), false, "Elektrik", 0, 0 },
-                    { 2, new DateTime(2024, 11, 27, 14, 51, 49, 160, DateTimeKind.Local).AddTicks(8776), false, "Moda", 0, 0 },
-                    { 3, new DateTime(2024, 11, 27, 14, 51, 49, 160, DateTimeKind.Local).AddTicks(8777), false, "Bilgisayar", 1, 1 },
-                    { 4, new DateTime(2024, 11, 27, 14, 51, 49, 160, DateTimeKind.Local).AddTicks(8778), false, "Kadın", 2, 1 }
+                    { 1, new DateTime(2025, 1, 19, 17, 39, 40, 941, DateTimeKind.Local).AddTicks(5692), false, "Elektrik", 0, 0 },
+                    { 2, new DateTime(2025, 1, 19, 17, 39, 40, 941, DateTimeKind.Local).AddTicks(5700), false, "Moda", 0, 0 },
+                    { 3, new DateTime(2025, 1, 19, 17, 39, 40, 941, DateTimeKind.Local).AddTicks(5703), false, "Bilgisayar", 1, 1 },
+                    { 4, new DateTime(2025, 1, 19, 17, 39, 40, 941, DateTimeKind.Local).AddTicks(5705), false, "Kadın", 2, 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -143,9 +143,9 @@ namespace YoutubeApi.Persistence.Migrations
                 columns: new[] { "Id", "CategoryId", "CreatedDate", "Description", "IsDeleted", "Title" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2024, 11, 27, 14, 51, 49, 175, DateTimeKind.Local).AddTicks(5026), "Kapının gidecekmiş mi ve çünkü.", false, "Aliquam." },
-                    { 2, 3, new DateTime(2024, 11, 27, 14, 51, 49, 175, DateTimeKind.Local).AddTicks(5091), "İncidunt ut suscipit ratione amet.", true, "Otobüs illo." },
-                    { 3, 4, new DateTime(2024, 11, 27, 14, 51, 49, 175, DateTimeKind.Local).AddTicks(5118), "Gazete qui dignissimos reprehenderit consequatur.", false, "Kalemi." }
+                    { 1, 1, new DateTime(2025, 1, 19, 17, 39, 40, 971, DateTimeKind.Local).AddTicks(454), "Cezbelendi deleniti exercitationem dolor gidecekmiş.", false, "Nostrum." },
+                    { 2, 3, new DateTime(2025, 1, 19, 17, 39, 40, 971, DateTimeKind.Local).AddTicks(817), "Quaerat sarmal alias anlamsız koyun.", true, "Voluptatem sunt." },
+                    { 3, 4, new DateTime(2025, 1, 19, 17, 39, 40, 971, DateTimeKind.Local).AddTicks(898), "Domates eaque alias suscipit voluptas.", false, "İn." }
                 });
 
             migrationBuilder.InsertData(
@@ -153,18 +153,18 @@ namespace YoutubeApi.Persistence.Migrations
                 columns: new[] { "Id", "BrandId", "CreatedDate", "Description", "Discount", "IsDeleted", "Price", "Title" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2024, 11, 27, 14, 51, 49, 178, DateTimeKind.Local).AddTicks(6014), "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016", 0.940536408587860m, false, 712.87m, "Tasty Rubber Car" },
-                    { 2, 3, new DateTime(2024, 11, 27, 14, 51, 49, 178, DateTimeKind.Local).AddTicks(6087), "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016", 9.250331674371290m, false, 564.79m, "Fantastic Frozen Sausages" }
+                    { 1, 1, new DateTime(2025, 1, 19, 17, 39, 40, 999, DateTimeKind.Local).AddTicks(7184), "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients", 3.031560925393330m, false, 155.74m, "Intelligent Plastic Shoes" },
+                    { 2, 3, new DateTime(2025, 1, 19, 17, 39, 40, 999, DateTimeKind.Local).AddTicks(7931), "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive", 3.521744918234550m, false, 15.80m, "Awesome Cotton Chips" }
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_CategoryProduct_ProductsId",
-                table: "CategoryProduct",
-                column: "ProductsId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Details_CategoryId",
                 table: "Details",
+                column: "CategoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProductCategories_CategoryId",
+                table: "ProductCategories",
                 column: "CategoryId");
 
             migrationBuilder.CreateIndex(
@@ -177,16 +177,16 @@ namespace YoutubeApi.Persistence.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "CategoryProduct");
-
-            migrationBuilder.DropTable(
                 name: "Details");
 
             migrationBuilder.DropTable(
-                name: "Products");
+                name: "ProductCategories");
 
             migrationBuilder.DropTable(
                 name: "Categories");
+
+            migrationBuilder.DropTable(
+                name: "Products");
 
             migrationBuilder.DropTable(
                 name: "Brands");

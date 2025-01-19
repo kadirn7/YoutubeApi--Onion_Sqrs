@@ -49,23 +49,23 @@ namespace YoutubeApi.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 12, 4, 18, 31, 56, 460, DateTimeKind.Local).AddTicks(696),
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 939, DateTimeKind.Local).AddTicks(7019),
                             IsDeleted = false,
-                            Name = "Shoes, Grocery & Tools"
+                            Name = "Clothing, Home & Games"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 12, 4, 18, 31, 56, 461, DateTimeKind.Local).AddTicks(3068),
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 939, DateTimeKind.Local).AddTicks(8735),
                             IsDeleted = false,
-                            Name = "Industrial"
+                            Name = "Toys, Baby & Books"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 12, 4, 18, 31, 56, 461, DateTimeKind.Local).AddTicks(3084),
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 939, DateTimeKind.Local).AddTicks(8775),
                             IsDeleted = true,
-                            Name = "Games"
+                            Name = "Electronics & Games"
                         });
                 });
 
@@ -101,7 +101,7 @@ namespace YoutubeApi.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 12, 4, 18, 31, 56, 462, DateTimeKind.Local).AddTicks(941),
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 941, DateTimeKind.Local).AddTicks(5692),
                             IsDeleted = false,
                             Name = "Elektrik",
                             ParentId = 0,
@@ -110,7 +110,7 @@ namespace YoutubeApi.Persistence.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 12, 4, 18, 31, 56, 462, DateTimeKind.Local).AddTicks(946),
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 941, DateTimeKind.Local).AddTicks(5700),
                             IsDeleted = false,
                             Name = "Moda",
                             ParentId = 0,
@@ -119,7 +119,7 @@ namespace YoutubeApi.Persistence.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 12, 4, 18, 31, 56, 462, DateTimeKind.Local).AddTicks(947),
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 941, DateTimeKind.Local).AddTicks(5703),
                             IsDeleted = false,
                             Name = "Bilgisayar",
                             ParentId = 1,
@@ -128,7 +128,7 @@ namespace YoutubeApi.Persistence.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 12, 4, 18, 31, 56, 462, DateTimeKind.Local).AddTicks(948),
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 941, DateTimeKind.Local).AddTicks(5705),
                             IsDeleted = false,
                             Name = "Kadın",
                             ParentId = 2,
@@ -172,28 +172,28 @@ namespace YoutubeApi.Persistence.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2024, 12, 4, 18, 31, 56, 476, DateTimeKind.Local).AddTicks(8760),
-                            Description = "Biber esse masaya yazın iusto.",
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 971, DateTimeKind.Local).AddTicks(454),
+                            Description = "Cezbelendi deleniti exercitationem dolor gidecekmiş.",
                             IsDeleted = false,
-                            Title = "Salladı."
+                            Title = "Nostrum."
                         },
                         new
                         {
                             Id = 2,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2024, 12, 4, 18, 31, 56, 476, DateTimeKind.Local).AddTicks(8829),
-                            Description = "Ea koyun commodi accusantium çakıl.",
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 971, DateTimeKind.Local).AddTicks(817),
+                            Description = "Quaerat sarmal alias anlamsız koyun.",
                             IsDeleted = true,
-                            Title = "İusto anlamsız."
+                            Title = "Voluptatem sunt."
                         },
                         new
                         {
                             Id = 3,
                             CategoryId = 4,
-                            CreatedDate = new DateTime(2024, 12, 4, 18, 31, 56, 476, DateTimeKind.Local).AddTicks(8854),
-                            Description = "Veniam ducimus gül aut exercitationem.",
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 971, DateTimeKind.Local).AddTicks(898),
+                            Description = "Domates eaque alias suscipit voluptas.",
                             IsDeleted = false,
-                            Title = "Aut."
+                            Title = "İn."
                         });
                 });
 
@@ -239,23 +239,23 @@ namespace YoutubeApi.Persistence.Migrations
                         {
                             Id = 1,
                             BrandId = 1,
-                            CreatedDate = new DateTime(2024, 12, 4, 18, 31, 56, 486, DateTimeKind.Local).AddTicks(2563),
-                            Description = "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-                            Discount = 5.596117543479070m,
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 999, DateTimeKind.Local).AddTicks(7184),
+                            Description = "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+                            Discount = 3.031560925393330m,
                             IsDeleted = false,
-                            Price = 315.67m,
-                            Title = "Fantastic Metal Shoes"
+                            Price = 155.74m,
+                            Title = "Intelligent Plastic Shoes"
                         },
                         new
                         {
                             Id = 2,
                             BrandId = 3,
-                            CreatedDate = new DateTime(2024, 12, 4, 18, 31, 56, 486, DateTimeKind.Local).AddTicks(2635),
-                            Description = "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
-                            Discount = 6.492962468018950m,
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 999, DateTimeKind.Local).AddTicks(7931),
+                            Description = "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
+                            Discount = 3.521744918234550m,
                             IsDeleted = false,
-                            Price = 105.62m,
-                            Title = "Small Rubber Shoes"
+                            Price = 15.80m,
+                            Title = "Awesome Cotton Chips"
                         });
                 });
 

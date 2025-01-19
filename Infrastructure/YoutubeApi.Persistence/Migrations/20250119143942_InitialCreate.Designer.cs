@@ -12,8 +12,8 @@ using YoutubeApi.Persistence.Context;
 namespace YoutubeApi.Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241127121610_InitialCreate3")]
-    partial class InitialCreate3
+    [Migration("20250119143942_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,21 +24,6 @@ namespace YoutubeApi.Persistence.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("CategoryProduct", b =>
-                {
-                    b.Property<int>("CategoriesId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CategoriesId", "ProductsId");
-
-                    b.HasIndex("ProductsId");
-
-                    b.ToTable("CategoryProduct");
-                });
 
             modelBuilder.Entity("YoutubeApi.Domain.Entities.Brand", b =>
                 {
@@ -67,23 +52,23 @@ namespace YoutubeApi.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 11, 27, 15, 16, 9, 770, DateTimeKind.Local).AddTicks(8726),
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 939, DateTimeKind.Local).AddTicks(7019),
                             IsDeleted = false,
-                            Name = "Games, Toys & Tools"
+                            Name = "Clothing, Home & Games"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 11, 27, 15, 16, 9, 772, DateTimeKind.Local).AddTicks(4648),
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 939, DateTimeKind.Local).AddTicks(8735),
                             IsDeleted = false,
-                            Name = "Health & Beauty"
+                            Name = "Toys, Baby & Books"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 11, 27, 15, 16, 9, 772, DateTimeKind.Local).AddTicks(4667),
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 939, DateTimeKind.Local).AddTicks(8775),
                             IsDeleted = true,
-                            Name = "Tools"
+                            Name = "Electronics & Games"
                         });
                 });
 
@@ -119,7 +104,7 @@ namespace YoutubeApi.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 11, 27, 15, 16, 9, 773, DateTimeKind.Local).AddTicks(2941),
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 941, DateTimeKind.Local).AddTicks(5692),
                             IsDeleted = false,
                             Name = "Elektrik",
                             ParentId = 0,
@@ -128,7 +113,7 @@ namespace YoutubeApi.Persistence.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 11, 27, 15, 16, 9, 773, DateTimeKind.Local).AddTicks(2947),
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 941, DateTimeKind.Local).AddTicks(5700),
                             IsDeleted = false,
                             Name = "Moda",
                             ParentId = 0,
@@ -137,7 +122,7 @@ namespace YoutubeApi.Persistence.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 11, 27, 15, 16, 9, 773, DateTimeKind.Local).AddTicks(2948),
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 941, DateTimeKind.Local).AddTicks(5703),
                             IsDeleted = false,
                             Name = "Bilgisayar",
                             ParentId = 1,
@@ -146,7 +131,7 @@ namespace YoutubeApi.Persistence.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 11, 27, 15, 16, 9, 773, DateTimeKind.Local).AddTicks(2949),
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 941, DateTimeKind.Local).AddTicks(5705),
                             IsDeleted = false,
                             Name = "Kadın",
                             ParentId = 2,
@@ -190,28 +175,28 @@ namespace YoutubeApi.Persistence.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2024, 11, 27, 15, 16, 9, 788, DateTimeKind.Local).AddTicks(4077),
-                            Description = "İçin doloremque salladı quis yazın.",
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 971, DateTimeKind.Local).AddTicks(454),
+                            Description = "Cezbelendi deleniti exercitationem dolor gidecekmiş.",
                             IsDeleted = false,
-                            Title = "Quia."
+                            Title = "Nostrum."
                         },
                         new
                         {
                             Id = 2,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2024, 11, 27, 15, 16, 9, 788, DateTimeKind.Local).AddTicks(4148),
-                            Description = "Odit numquam magnam ad corporis.",
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 971, DateTimeKind.Local).AddTicks(817),
+                            Description = "Quaerat sarmal alias anlamsız koyun.",
                             IsDeleted = true,
-                            Title = "Consectetur minima."
+                            Title = "Voluptatem sunt."
                         },
                         new
                         {
                             Id = 3,
                             CategoryId = 4,
-                            CreatedDate = new DateTime(2024, 11, 27, 15, 16, 9, 788, DateTimeKind.Local).AddTicks(4263),
-                            Description = "Eius voluptas masanın dignissimos sunt.",
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 971, DateTimeKind.Local).AddTicks(898),
+                            Description = "Domates eaque alias suscipit voluptas.",
                             IsDeleted = false,
-                            Title = "Sıradanlıktan."
+                            Title = "İn."
                         });
                 });
 
@@ -257,39 +242,39 @@ namespace YoutubeApi.Persistence.Migrations
                         {
                             Id = 1,
                             BrandId = 1,
-                            CreatedDate = new DateTime(2024, 11, 27, 15, 16, 9, 791, DateTimeKind.Local).AddTicks(7883),
-                            Description = "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-                            Discount = 1.00354361933880m,
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 999, DateTimeKind.Local).AddTicks(7184),
+                            Description = "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+                            Discount = 3.031560925393330m,
                             IsDeleted = false,
-                            Price = 870.19m,
-                            Title = "Rustic Rubber Gloves"
+                            Price = 155.74m,
+                            Title = "Intelligent Plastic Shoes"
                         },
                         new
                         {
                             Id = 2,
                             BrandId = 3,
-                            CreatedDate = new DateTime(2024, 11, 27, 15, 16, 9, 791, DateTimeKind.Local).AddTicks(7952),
-                            Description = "The Football Is Good For Training And Recreational Purposes",
-                            Discount = 6.865242328885380m,
+                            CreatedDate = new DateTime(2025, 1, 19, 17, 39, 40, 999, DateTimeKind.Local).AddTicks(7931),
+                            Description = "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
+                            Discount = 3.521744918234550m,
                             IsDeleted = false,
-                            Price = 803.46m,
-                            Title = "Rustic Rubber Pizza"
+                            Price = 15.80m,
+                            Title = "Awesome Cotton Chips"
                         });
                 });
 
-            modelBuilder.Entity("CategoryProduct", b =>
+            modelBuilder.Entity("YoutubeApi.Domain.Entities.ProductCategory", b =>
                 {
-                    b.HasOne("YoutubeApi.Domain.Entities.Category", null)
-                        .WithMany()
-                        .HasForeignKey("CategoriesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
 
-                    b.HasOne("YoutubeApi.Domain.Entities.Product", null)
-                        .WithMany()
-                        .HasForeignKey("ProductsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProductId", "CategoryId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("ProductCategories");
                 });
 
             modelBuilder.Entity("YoutubeApi.Domain.Entities.Detail", b =>
@@ -314,9 +299,35 @@ namespace YoutubeApi.Persistence.Migrations
                     b.Navigation("Brand");
                 });
 
+            modelBuilder.Entity("YoutubeApi.Domain.Entities.ProductCategory", b =>
+                {
+                    b.HasOne("YoutubeApi.Domain.Entities.Category", "Category")
+                        .WithMany("ProductCategories")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("YoutubeApi.Domain.Entities.Product", "Product")
+                        .WithMany("ProductCategories")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("YoutubeApi.Domain.Entities.Category", b =>
                 {
                     b.Navigation("Details");
+
+                    b.Navigation("ProductCategories");
+                });
+
+            modelBuilder.Entity("YoutubeApi.Domain.Entities.Product", b =>
+                {
+                    b.Navigation("ProductCategories");
                 });
 #pragma warning restore 612, 618
         }
