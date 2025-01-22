@@ -17,12 +17,18 @@ namespace YoutubeApi.Aplication.Features.Products.Command.DeleteProduct
         {
             this.unitOfWork = unitOfWork;
         }
+
         public async Task Handle(DeleteProductCommandRequest request, CancellationToken cancellationToken)
         {
-            var product= await unitOfWork.GetReadRepository<Product>().GetAsync(x=>x.Id ==request.Id && !x.IsDeleted);
+            var product = await unitOfWork.GetReadRepository<Product>().GetAsync(x => x.Id == request.Id && !x.IsDeleted);
+
+            if (product == null)
+            {
+                throw new InvalidOperationException($"Product with Id {request.Id} not found or already silindi.");
+            }
 
             product.IsDeleted = true;
-            
+
             await unitOfWork.GetWriteRepository<Product>().UpdateAsync(product);
             await unitOfWork.SaveAsync();
         }

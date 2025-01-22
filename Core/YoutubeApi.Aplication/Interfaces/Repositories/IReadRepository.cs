@@ -13,11 +13,11 @@ namespace YoutubeApi.Aplication.Interfaces.Repositories
     {
         Task<IList<T>>GetAllAsync(Expression<Func<T, bool>>? predicate=null,
             Func<IQueryable<T>,IIncludableQueryable<T,object>>? include=null,
-            Func<IQueryable<T>,IOrderedQueryable<T>> orderBy=null,
+            Func<IQueryable<T>,IOrderedQueryable<T>>? orderBy=null,
             bool enableTracking=false);
         Task<IList<T>> GetAllByPacingAsync(Expression<Func<T, bool>>? predicate = null,
             Func<IQueryable<T>, IIncludableQueryable<T, object>>? include = null,
-            Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
+            Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null,
             bool enableTracking = false, int currentPage = 1,int pageSize =3);
         Task<T> GetAsync(Expression<Func<T, bool>> predicate ,
             Func<IQueryable<T>, IIncludableQueryable<T, object>>? include = null,

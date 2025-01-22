@@ -35,11 +35,20 @@ namespace YoutubeApi.Api.Controllers
             await mediator.Send(request);
             return Ok();
         }
-        [HttpPost]
-        public async Task<IActionResult> DeleteProduct(DeleteProductCommandRequest request)
+
+        [HttpPost("DeleteProduct/{id}")]
+        public async Task<IActionResult> DeleteProduct(int id)
         {
-            await mediator.Send(request);
-            return Ok();
+            try
+            {
+                var request = new DeleteProductCommandRequest { Id = id };
+                await mediator.Send(request);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
     }
 }
